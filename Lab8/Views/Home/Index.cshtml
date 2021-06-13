@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Lab8.Models.Shoe>
+@{
+    ViewData["Title"] = "Shoe catalog";
+}
+
+
+
+    <h3>Sneakers</h3>
+    <table>
+        <tr>
+            <td>Model</td>
+            <td>Brand</td>
+            <td>Price</td>
+            <td></td>
+        </tr>
+        @foreach (var shoe in Model)
+        {
+            <tr>
+                <td>@shoe.Name</td>
+                <td>@shoe.Brand</td>
+                <td>@shoe.Price</td>
+                <td><a href="/">Buy</a></td>
+            </tr>
+        }
+    </table>
+
